@@ -1,1 +1,1 @@
-# Insta-Events
+# InstaEvents
