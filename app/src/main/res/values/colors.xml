@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!--  <color name="colorPrimary">#F8F8FF</color>-->
+    <color name="colorPrimary">#3B2169</color>
+    <!-- <color name="colorPrimaryDark">#3D3DA2</color> -->
+    <color name="colorPrimaryDark">#1C0F31</color>
+    <!--<color name="colorAccent">#D81B60</color> -->
+    <color name="colorAccent">#673AB7</color>
+
+    <color name="compoundBlue">#283699</color>
+
+  <color name="colorWhite">#ffffff</color>
+</resources>
