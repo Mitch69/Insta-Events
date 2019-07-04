@@ -1,0 +1,16 @@
+
+<!-- Style for the box holding the number of days and 'Days' text in R.layout.upcoming_activity -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <stroke
+        android:width="2dp"
+        android:color="#FFFFFF" />
+
+    <solid android:color="#FFFFFF" />
+
+    <corners
+        android:radius="50dp"
+        android:topRightRadius="120dp"
+        android:topLeftRadius="80dp"
+        />
+</shape>
+

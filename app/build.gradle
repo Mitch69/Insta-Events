@@ -9,6 +9,10 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        renderscriptTargetApi 28
+        renderscriptSupportModeEnabled true
+
     }
     buildTypes {
         release {
@@ -36,8 +40,10 @@ dependencies {
 
     implementation 'com.aurelhubert:ahbottomnavigation:2.1.0'
 
-    // library for loading images into imageviews
-    implementation 'com.squareup.picasso:picasso:2.5.2'
+    //for the round imageview for profile pic
+    implementation 'de.hdodenhof:circleimageview:3.0.0'
+    //activity transition animation
+    implementation 'com.github.mohammadatif:Animatoo:master'
     //retrofit library for making network calls
     implementation 'com.squareup.retrofit2:retrofit:2.4.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.4.0'

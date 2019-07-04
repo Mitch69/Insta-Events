@@ -1,6 +1,9 @@
 package android.example.instaevents;
 
-import android.example.instaevents.Fragments.HomeFragment;
+import android.example.instaevents.BrowsePage.AllCategories.BrowseFragment;
+import android.example.instaevents.EventsPage.TabFragment;
+import android.example.instaevents.Homepage.Fragments.HomeFragment;
+import android.example.instaevents.Profile.ProfileFragment;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -14,10 +17,10 @@ public class MainActivity extends AppCompatActivity {
 
 
     final Fragment fragment1 = new HomeFragment();
-    final Fragment fragment2 = new HomeFragment();
-    final Fragment fragment3 = new HomeFragment();
+    final Fragment fragment2 = new BrowseFragment();
+    final Fragment fragment3 = new TabFragment();
     final Fragment fragment4 = new HomeFragment();
-    final Fragment fragment5 = new HomeFragment();
+    final Fragment fragment5 = new ProfileFragment();
     final FragmentManager fm = getSupportFragmentManager();
     Fragment active = fragment1;
 
@@ -26,8 +29,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+//        setSupportActionBar(toolbar);
 
 
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);

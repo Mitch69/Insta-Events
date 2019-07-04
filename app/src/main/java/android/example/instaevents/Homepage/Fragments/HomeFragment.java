@@ -1,6 +1,7 @@
-package android.example.instaevents.Fragments;
+package android.example.instaevents.Homepage.Fragments;
 
-import android.example.instaevents.Adapters.HomepageVerticalAdapter;
+import android.example.instaevents.Homepage.Adapters.HomepageVerticalAdapter;
+import android.example.instaevents.Homepage.Models.HomepageCategoryModel;
 import android.example.instaevents.R;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -18,7 +19,7 @@ public class HomeFragment extends Fragment {
 
     private RecyclerView recyclerView;
     private HomepageVerticalAdapter adapter;
-    ArrayList<String> itemsArrayList = new ArrayList<>();
+    ArrayList<HomepageCategoryModel> eventCategory;
 
     @Nullable
     @Override
@@ -28,12 +29,14 @@ public class HomeFragment extends Fragment {
         recyclerView = (RecyclerView) view.findViewById(R.id.parentRV);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
-        String[] items = {"Trending", "Music", "Tech", "Agriculture"};
-        for (int i = 0; i < items.length; i++) {
-            itemsArrayList.add(items[i]);
-        }
+        eventCategory = new ArrayList<>();
+        eventCategory.add(new HomepageCategoryModel("Trending", "Things that you may like"));
+        eventCategory.add(new HomepageCategoryModel("Agriculture", "Things that you may like"));
+        eventCategory.add(new HomepageCategoryModel("IT & Tech", "Things that you may like"));
+        eventCategory.add(new HomepageCategoryModel("Entertainment", "Things that you may like"));
 
-        adapter = new HomepageVerticalAdapter(itemsArrayList, getActivity());
+
+        adapter = new HomepageVerticalAdapter(eventCategory, getActivity());
         recyclerView.setAdapter(adapter);
         adapter.notifyDataSetChanged();
 

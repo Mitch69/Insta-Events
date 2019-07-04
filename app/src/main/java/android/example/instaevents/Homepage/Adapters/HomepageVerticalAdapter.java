@@ -1,6 +1,8 @@
-package android.example.instaevents.Adapters;
+package android.example.instaevents.Homepage.Adapters;
 
 import android.content.Context;
+import android.example.instaevents.Homepage.Models.EventDetailsModel;
+import android.example.instaevents.Homepage.Models.HomepageCategoryModel;
 import android.example.instaevents.R;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.LinearLayoutManager;
@@ -14,13 +16,13 @@ import java.util.ArrayList;
 
 public class HomepageVerticalAdapter extends RecyclerView.Adapter<HomepageVerticalAdapter.MyViewHolder> {
 
-    ArrayList<String> HomepageArrayList;
+    ArrayList<HomepageCategoryModel> data;
     Context context;
-    ArrayList<String> daysArrayList = new ArrayList<>();
+    ArrayList<EventDetailsModel> eventDetails;
 
 
-    public HomepageVerticalAdapter(ArrayList<String> HomepageArrayList, Context context) {
-        this.HomepageArrayList = HomepageArrayList;
+    public HomepageVerticalAdapter(ArrayList<HomepageCategoryModel> data, Context context) {
+        this.data = data;
         this.context = context;
     }
 
@@ -33,24 +35,26 @@ public class HomepageVerticalAdapter extends RecyclerView.Adapter<HomepageVertic
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        holder.ItemName.setText(HomepageArrayList.get(position));
+        holder.ItemName.setText(data.get(position).getCategory());
+        holder.ItemDescription.setText(data.get(position).getDescription());
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false);
         holder.ChildRV.setLayoutManager(layoutManager);
         holder.ChildRV.setHasFixedSize(true);
-        daysArrayList.clear();
-        String[] days = {"Karura Forest Drive", "20th May 2019", "Karura, BongoMoyo"};
-        for (int i=0; i<days.length; i++){
-            daysArrayList.add(days[i]);
-        }
 
-        HomepageHorizontalAdapter homepageHorizontalAdapter = new HomepageHorizontalAdapter(daysArrayList);
-        holder.ChildRV.setAdapter(homepageHorizontalAdapter);
-        homepageHorizontalAdapter.notifyDataSetChanged();
+        eventDetails = new ArrayList<>();
+        eventDetails.add(new EventDetailsModel(R.drawable.choma, "Choma na Ngoma", "1th May 2019", "Kasarani" ));
+        eventDetails.add(new EventDetailsModel(R.drawable.choma, "Color Fest", "12th May 2019", "Machakos" ));
+        eventDetails.add(new EventDetailsModel(R.drawable.choma, "Black and Whiteis", "19th May 2019","Embakasi" ));
+
+
+        HomepageCardviewAdapter homepageCardviewAdapter = new HomepageCardviewAdapter(eventDetails);
+        holder.ChildRV.setAdapter(homepageCardviewAdapter);
+        homepageCardviewAdapter.notifyDataSetChanged();
     }
 
     @Override
     public int getItemCount() {
-        return HomepageArrayList.size();
+        return data.size();
     }
 
 

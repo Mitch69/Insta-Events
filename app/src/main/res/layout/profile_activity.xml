@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:id="@+id/idScroll"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Profile.ProfileFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/blurImage"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/pic"/>
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/profile_image"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="136dp"
+            app:civ_border_color="#FFF"
+            app:civ_border_width="2dp"/>
+
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="250dp"
+            android:textColor="#000"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/browseEvents"
+            android:layout_width="160dp"
+            android:layout_height="50dp"
+            android:text="Settings"
+            android:layout_below="@+id/username"
+            android:textAllCaps="false"
+            android:textColor="#FFF"
+            android:background="@drawable/button_shape"
+            android:layout_marginTop="450dp"
+            android:layout_marginBottom="15dp"
+            android:layout_centerHorizontal="true"
+            android:drawableLeft="@drawable/profile_settings_icon"
+            android:paddingLeft="28dp"
+            android:paddingRight="16dp"
+            android:elevation="18dp" />
+
+    </RelativeLayout>
+</ScrollView>
