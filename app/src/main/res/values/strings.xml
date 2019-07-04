@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Viewtrial</string>
+    <string name="get_started">Get started</string>
+    <string name="let_s_find_your_first_event">Let\'s find your first event</string>
+    <string name="browse_events">Browse events</string>
+    <string name="or">or</string>
+    <string name="read_what_s_popular">Read what\'s popular</string>
+    <string name="see_what_s_popular">See what\'s popular</string>
+</resources>

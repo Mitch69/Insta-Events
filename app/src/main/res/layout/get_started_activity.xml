@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GetStartedActivity">
+
+    <!--<com.varunest.sparkbutton.SparkButton-->
+        <!--android:id="@+id/spark_button"-->
+        <!--android:layout_width="400dp"-->
+        <!--android:layout_height="400dp"-->
+        <!--app:sparkbutton_activeImage="@drawable/browse"-->
+        <!--app:sparkbutton_iconSize="150dp"-->
+        <!--app:sparkbutton_primaryColor="@color/colorPrimary"-->
+        <!--app:sparkbutton_secondaryColor="@color/colorPrimaryDark"-->
+         <!--/>-->
+
+    <TextView
+        android:id="@+id/getStarted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/get_started"
+        android:textColor="#000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginTop="80dp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/firstEvent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/let_s_find_your_first_event"
+        android:textColor="#000"
+        android:textSize="16sp"
+        android:layout_below="@+id/getStarted"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"/>
+
+    <!--<Button-->
+        <!--android:id="@+id/browseEvents"-->
+        <!--android:layout_width="200dp"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:text="@string/browse_events"-->
+        <!--android:textAllCaps="false"-->
+        <!--android:textColor="#FFF"-->
+        <!--android:background="@drawable/button_shape"-->
+        <!--android:layout_below="@+id/firstEvent"-->
+        <!--android:layout_marginTop="18dp"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:elevation="18dp" />-->
+
+    <com.varunest.sparkbutton.SparkButton
+        android:id="@+id/spark_button"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        app:sparkbutton_activeImage="@drawable/tapke"
+        app:sparkbutton_iconSize="78dp"
+        app:sparkbutton_primaryColor="@color/colorPrimary"
+        app:sparkbutton_secondaryColor="@color/colorPrimaryDark"
+        android:layout_below="@+id/firstEvent"
+        android:layout_marginTop="-80dp"
+        android:layout_centerHorizontal="true" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="248dp">
+
+        <View
+            android:layout_gravity="center_vertical"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_weight="1"
+            android:background="#673AB7" />
+
+        <TextView
+            android:id="@+id/or"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/or"
+            android:textSize="16sp"
+            android:textColor="#000"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp" />
+
+        <View
+            android:layout_gravity="center_vertical"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_weight="1"
+            android:background="#673AB7" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/seeWhatsPopular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/see_what_s_popular"
+        android:textSize="16sp"
+        android:textColor="#000"
+        android:layout_below="@+id/spark_button"
+        android:layout_marginTop="-20dp"
+        android:layout_centerHorizontal="true"/>
+    <!--100 with the original button-->
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/parentRV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/seeWhatsPopular"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+
+        </android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>
+
