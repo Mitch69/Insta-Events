@@ -8,7 +8,6 @@ import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
@@ -29,12 +28,14 @@ import com.google.firebase.storage.UploadTask;
 
 import java.io.IOException;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 
 public class SetupActivity extends AppCompatActivity {
 
     private static final int CHOOSE_IMAGE = 101;
 
-    private ImageView setupImage;
+    private CircleImageView setupImage;
     private EditText setupName;
     private Button setupBtn;
     private ProgressBar setupProgressBar;
@@ -103,8 +104,6 @@ public class SetupActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult (int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-
-
 
         if (requestCode == CHOOSE_IMAGE && resultCode == RESULT_OK && data != null && data.getData() != null){
             uriProfileImage = data.getData();

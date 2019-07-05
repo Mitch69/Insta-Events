@@ -3,10 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_margin="8dp">
+    android:layout_height="match_parent">
 
-    <androidx.appcompat.widget.Toolbar
+
+   <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar_setup"
         style="@style/ToolbarTheme"
         android:layout_width="match_parent"
@@ -18,30 +18,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView_tap"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="64dp"
-        android:layout_marginEnd="8dp"
-        android:gravity="center"
-        android:text="Tap on the icon to choose a profile picture"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/toolbar_setup" />
-
     <RelativeLayout
         android:id="@+id/relativeLayout_setup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_tap">
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_setup">
 
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/setup_image"
             android:layout_width="200dp"
             android:layout_height="150dp"
@@ -75,6 +61,8 @@
         android:ems="10"
         android:hint="Display name"
         android:inputType="textPersonName"
+        android:drawableStart="@drawable/ic_person_black_24dp"
+        android:drawableEnd="@drawable/ic_create_black_24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/relativeLayout_setup" />

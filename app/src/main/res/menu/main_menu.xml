@@ -7,10 +7,6 @@
         android:title="@string/action_search_text"
         app:showAsAction="always" />
     <item
-        android:id="@+id/action_viewUsers_button"
-        android:title="View Images"
-        />
-    <item
         android:id="@+id/action_settings_button"
         android:title="@string/account_settings_text" />
     <item
