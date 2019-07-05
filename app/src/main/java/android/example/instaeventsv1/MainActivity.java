@@ -1,41 +1,28 @@
 package android.example.instaeventsv1;
 
 import android.content.Intent;
-import android.content.res.TypedArray;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
-import android.support.v7.widget.helper.ItemTouchHelper;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 
-import com.google.firebase.FirebaseApp;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.ItemTouchHelper;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseAuthSettings;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.firestore.auth.User;
 
 import java.util.ArrayList;
 import java.util.Collections;
-
-import retrofit2.Call;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
-import retrofit2.http.Body;
-import retrofit2.http.GET;
-import retrofit2.http.POST;
-import retrofit2.http.PUT;
-import retrofit2.http.Path;
 
 public class MainActivity extends AppCompatActivity {
 
     //Member variables
     private RecyclerView mRecyclerView;
     private ArrayList<Sport> mSportData;
-    private SportsAdapter mAdapter;
+//    private SportsAdapter mAdapter;
 
     private Toolbar mainToolbar;
 
@@ -66,11 +53,11 @@ public class MainActivity extends AppCompatActivity {
         mSportData = new ArrayList<>();
 
         //Initialize the adapter and set it ot the RecyclerView
-        mAdapter = new SportsAdapter(this, mSportData);
-        mRecyclerView.setAdapter(mAdapter);
+        //mAdapter = new SportsAdapter(this, mSportData);
+        //mRecyclerView.setAdapter(mAdapter);
 
         //Get the data
-        initializeData();
+        //initializeData();
 
         // Helper class for creating swipe to dismiss and drag and drop
         // functionality.
@@ -98,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
 
                 // Swap the items and notify the adapter.
                 Collections.swap(mSportData, from, to);
-                mAdapter.notifyItemMoved(from, to);
+               // mAdapter.notifyItemMoved(from, to);
                 return true;
             }
 
@@ -114,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
                 // Remove the item from the dataset.
                 mSportData.remove(viewHolder.getAdapterPosition());
                 // Notify the adapter.
-                mAdapter.notifyItemRemoved(viewHolder.getAdapterPosition());
+            //    mAdapter.notifyItemRemoved(viewHolder.getAdapterPosition());
             }
         });
 
@@ -134,16 +121,11 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
             finish();
         }
-        else {
-
-        }
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main_menu, menu);
-
-
 
         return true;
 
@@ -157,13 +139,19 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             case R.id.action_settings_button:
                 accountSetup();
-
+           // case R.id.action_viewUsers_button:
+            //    viewUploads();
                 default:
                     return false;
         }
 
-
     }
+
+    //Opens UserActivity
+    /*private void viewUploads() {
+        Intent intent = new Intent(MainActivity.this, UserActivity.class);
+        startActivity(intent);
+    }*/
 
     private void accountSetup() {
         Intent intent = new Intent(MainActivity.this, SetupActivity.class);
@@ -184,51 +172,31 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Method for initializing the sports data from resources.
      */
-    private void initializeData() {
+   /* private void initializeData() {
         //Get the resources from the XML file
         String[] sportsList = getResources().getStringArray(R.array.sports_titles);
         String[] sportsInfo = getResources().getStringArray(R.array.sports_info);
 
-        TypedArray	sportsImageResources = getResources().obtainTypedArray(R.array.sports_images);
+        //TypedArray	sportsImageResources = getResources().obtainTypedArray(R.array.sports_images);
 
         //Clear the existing data (to avoid duplication)
         mSportData.clear();
 
         //Create the ArrayList of Sports objects with the titles and information about each sport
-        for(int i=0;i<sportsList.length;i++){
             mSportData.add(new Sport(sportsList[i], sportsInfo[i], sportsImageResources.getResourceId(i, 0)));
         }
 
         //Recycle the typed array
-        sportsImageResources.recycle();
+       // sportsImageResources.recycle();
 
         //Notify the adapter of the change
-        mAdapter.notifyDataSetChanged();
-    }
-
-    /*public void LaunchDetailActivity(View view) {
-        Intent intent = new Intent(this, LoginActivity.class);
-        startActivity(intent);
-    }*/
+      //  mAdapter.notifyDataSetChanged();
+    } */
 
 
 
+   // public void resetSports(View view) {
+        //initializeData();
+    //}
 
-
-
-    public void launchCategoryActivity(View view) {
-        Intent intent = new Intent(this, CategoryActivity.class);
-        startActivity(intent);
-    }
-
-    public void resetSports(View view) {
-        initializeData();
-    }
-
-    public void newEvent(View view) {
-
-        Intent intent = new Intent(this, Event_Activity.class);
-        startActivity(intent);
-
-    }
 }
