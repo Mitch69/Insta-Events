@@ -16,8 +16,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".UserActivity"></activity>
+
+        <activity android:name=".GetStartedActivity"/>
+
         <activity android:name=".SetupActivity" />
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,6 +28,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".LoginActivity"
             android:label="@string/login"
@@ -33,6 +37,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="android.example.instaeventsv1.MainActivity" />
         </activity>
+
         <activity
             android:name=".RegisterActivity"
             android:label="@string/register"
@@ -41,6 +46,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="android.example.instaeventsv1.MainActivity" />
         </activity>
+
     </application>
 
 </manifest>

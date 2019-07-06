@@ -58,8 +58,15 @@ public class SetupActivity extends AppCompatActivity {
        setupImage = findViewById(R.id.setup_image);
        setupBtn = findViewById(R.id.setup_btn);
        setupProgressBar = findViewById(R.id.setupProgressBar);
+       FirebaseUser user = mAuth.getCurrentUser();
 
-       loadUserInformation();
+       if (user != null) {
+           loadUserInformation();
+       }
+       else{
+           Intent intent = new Intent(SetupActivity.this, LoginActivity.class);
+           startActivity(intent);
+       }
 
        setupImage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -84,6 +91,7 @@ public class SetupActivity extends AppCompatActivity {
             finish();
             startActivity(new Intent(this, SetupActivity.class));
         }
+
     }
 
     private void loadUserInformation() {
@@ -178,6 +186,8 @@ public class SetupActivity extends AppCompatActivity {
                 public void onComplete(@NonNull Task<Void> task) {
                     if(task.isSuccessful()){
                         Toast.makeText(SetupActivity.this, "Profile Updated", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(SetupActivity.this, MainActivity.class);
+                        startActivity(intent);
                     }
                 }
             });

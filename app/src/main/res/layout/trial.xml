@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GetStartedActivity">
+
+    <TextView
+        android:id="@+id/getStarted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/get_started"
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/firstEvent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/let_s_find_your_first_event"
+        android:textColor="#000"
+        android:layout_below="@+id/getStarted"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/browseEvents"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:text="@string/browse_events"
+        android:textAllCaps="false"
+        android:textColor="#FFF"
+        android:background="@drawable/button_shape"
+        android:layout_below="@+id/firstEvent"
+        android:layout_marginTop="14dp"
+        android:layout_centerHorizontal="true"
+        android:elevation="18dp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="180dp">
+
+        <View
+            android:layout_gravity="center_vertical"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_weight="1"
+            android:background="#673AB7" />
+
+        <TextView
+            android:id="@+id/or"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/or"
+            android:textColor="#000"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp" />
+
+        <View
+            android:layout_gravity="center_vertical"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_weight="1"
+            android:background="#673AB7" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/seeWhatsPopular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/see_what_s_popular"
+        android:textColor="#000"
+        android:layout_below="@+id/browseEvents"
+        android:layout_marginTop="60dp"
+        android:layout_centerHorizontal="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="180dp">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/parentRV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/seeWhatsPopular"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+
+</RelativeLayout>
+
