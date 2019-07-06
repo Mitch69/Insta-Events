@@ -27,7 +27,7 @@ public class GetStartedActivity extends AppCompatActivity {
 
         eventList = new ArrayList<>();
         eventList.add(new EventDetailsModel(R.drawable.choma, "Choma na Ngoma", "12th June", "Kasarani"));
-        eventList.add(new EventDetailsModel(R.drawable.choma, "Choma na Ngoma", "12th June", "Kasarani"));
+        eventList.add(new EventDetailsModel(R.drawable.choma, "Choma na Ngoma", "12git th June", "Kasarani"));
         eventList.add(new EventDetailsModel(R.drawable.choma, "Choma na Ngoma", "12th June", "Kasarani"));
         eventList.add(new EventDetailsModel(R.drawable.choma, "Choma na Ngoma", "12th June", "Kasarani"));
 
