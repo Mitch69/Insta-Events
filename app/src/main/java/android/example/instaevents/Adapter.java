@@ -15,13 +15,17 @@ import java.util.List;
 
 public class Adapter extends PagerAdapter {
 
-    private List<android.example.viewpager.Model> models;
+    private List<android.example.instaevents.Model> models;
     private LayoutInflater layoutInflater;
     private Context context;
 
-    public Adapter(List<android.example.viewpager.Model> models, Context context) {
+    public Adapter(List<android.example.instaevents.Model> models, Context context) {
         this.models = models;
         this.context = context;
+    }
+
+    public Adapter(List<Model> models, HomeActivity context) {
+
     }
 
     @Override

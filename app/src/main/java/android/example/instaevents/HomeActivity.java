@@ -12,8 +12,8 @@ import java.util.List;
 
 public class HomeActivity extends AppCompatActivity {
     ViewPager viewPager;
-    android.example.viewpager.Adapter adapter;
-    List<android.example.viewpager.Model> models;
+    android.example.instaevents.Adapter adapter;
+    List<android.example.instaevents.Model> models;
     Integer[] colors = null;
     ArgbEvaluator argbEvaluator = new ArgbEvaluator();
 
@@ -23,12 +23,12 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
         models = new ArrayList<>();
-        models.add(new android.example.viewpager.Model(R.drawable.image1, "Brochure", "Brochure is an informative paper document (often also used for advertising) that can be folded into a template"));
-        models.add(new android.example.viewpager.Model(R.drawable.image2, "Sticker", "Sticker is a type of label: a piece of printed paper, plastic, vinyl, or other material with pressure sensitive adhesive on one side"));
-        models.add(new android.example.viewpager.Model(R.drawable.image3, "Poster", "Poster is any piece of printed paper designed to be attached to a wall or vertical surface."));
-        models.add(new android.example.viewpager.Model(R.drawable.image4, "Namecard", "Business cards are cards bearing business information about a company or individual."));
+        models.add(new android.example.instaevents.Model(R.drawable.image1, "Brochure", "Brochure is an informative paper document (often also used for advertising) that can be folded into a template"));
+        models.add(new android.example.instaevents.Model(R.drawable.image2, "Sticker", "Sticker is a type of label: a piece of printed paper, plastic, vinyl, or other material with pressure sensitive adhesive on one side"));
+        models.add(new android.example.instaevents.Model(R.drawable.image3, "Poster", "Poster is any piece of printed paper designed to be attached to a wall or vertical surface."));
+        models.add(new android.example.instaevents.Model(R.drawable.image4, "Namecard", "Business cards are cards bearing business information about a company or individual."));
 
-        adapter = new android.example.viewpager.Adapter(models, this);
+        adapter = new android.example.instaevents.Adapter(models, this);
 
         viewPager = findViewById(R.id.viewPager);
         viewPager.setAdapter(adapter);
