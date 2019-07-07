@@ -37,7 +37,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Choma na Ngoma"
+                android:text="@string/choma_na_ngoma"
                 android:textColor="#262626"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -50,7 +50,7 @@
                 android:layout_marginTop="10dp"
                 android:background="@drawable/button_shape"
                 android:clickable="true"
-                android:text="I'm interested"
+                android:text="@string/i_m_interested"
                 android:textAllCaps="false"
                 android:textColor="#fff"
                 android:textSize="15sp"/>
@@ -83,7 +83,7 @@
                 android:layout_marginTop="-21dp"
                 android:layout_marginRight="16dp"
                 android:drawablePadding="10dp"
-                android:text="Date" />
+                android:text="@string/date" />
 
 
             <ImageView
@@ -103,7 +103,7 @@
                 android:layout_marginTop="-18dp"
                 android:layout_marginRight="16dp"
                 android:drawablePadding="10dp"
-                android:text="Time" />
+                android:text="@string/time" />
 
 
             <ImageView
@@ -123,7 +123,7 @@
                 android:layout_marginTop="-18dp"
                 android:layout_marginRight="16dp"
                 android:drawablePadding="10dp"
-                android:text="Location" />
+                android:text="@string/location" />
 
 
             <Space
@@ -138,7 +138,7 @@
                 android:layout_marginTop="3dp"
                 android:layout_marginRight="16dp"
                 android:drawablePadding="10dp"
-                android:text="Featuring"
+                android:text="@string/featuring"
                 android:textColor="#000" />
             <TextView
                 android:id="@+id/idFeaturing"
@@ -172,7 +172,7 @@
                 android:layout_marginTop="3dp"
                 android:layout_marginRight="16dp"
                 android:drawablePadding="10dp"
-                android:text="More Info" />
+                android:text="@string/more_info" />
 
 
 

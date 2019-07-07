@@ -30,7 +30,7 @@
             android:id="@+id/category"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Category"
+            android:text="@string/category"
             android:textSize="14sp"
             android:gravity="center"
             android:textColor="#000"/>

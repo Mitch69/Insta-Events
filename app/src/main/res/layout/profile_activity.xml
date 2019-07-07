@@ -54,7 +54,7 @@
         android:drawableEnd="@drawable/ic_create_black_24dp"
         android:drawablePadding="5dp"
         android:ems="10"
-        android:hint="Display name"
+        android:hint="@string/display_name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
@@ -75,7 +75,7 @@
         android:drawableStart="@drawable/ic_save_white_24dp"
         android:drawablePadding="5dp"
         android:elevation="18dp"
-        android:text="Save Details"
+        android:text="@string/save_details"
         android:textAllCaps="false"
         android:textColor="#FFF"
         app:layout_constraintEnd_toEndOf="parent"
@@ -94,7 +94,7 @@
         android:layout_marginStart="162dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="162dp"
-        android:text="Logout"
+        android:text="@string/logout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/setup_btn" />

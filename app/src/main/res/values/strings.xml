@@ -9,7 +9,6 @@
     //Gabriel's Strings
     <string name="activity2_name">Login Page</string>
     <string name="title_placeholder">Title</string>
-    <string name="news_placeholder">Event</string>
     <string name="sports_info_placeholder">Here is some new on the event.</string>
     <string name="go_to_login">Login</string>
     <string name="signup_register">SignUp/Register</string>
@@ -20,7 +19,6 @@
     <string name="password_editText">Password</string>
     <string name="password">Password</string>
     <string name="not_a_member_yet">Not a member yet?</string>
-    <string name="register">Register</string>
     <string name="see_what_s_popular">See what is popular</string>
     <string name="or">or</string>
     <string name="let_s_find_your_first_event">Let\'s find your first event</string>
@@ -32,7 +30,7 @@
     <string name="prompt_password">Password</string>
     <string name="action_sign_in">Sign in or register</string>
     <string name="action_sign_in_short">Sign in</string>
-    <string name="welcome">"Welcome !"</string>
+    <string name="welcome">Welcome!</string>
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
@@ -41,9 +39,26 @@
     <string name="action_logout_text">Logout</string>
     <string name="reg_login_text">Already have an account?</string>
     <string name="confirm_pass_text">Confirm Password</string>
-    <string name="create_an_account">Create an Account</string>
     <string name="setup_hint_name">Your Name</string>
     <string name="setup_btn_name_text">Save Account Settings</string>
     <string name="setup_account_text">Account Settings</string>
+    <string name="create_an_account">Create an Account</string>
+    <string name="register">Register</string>
+    <string name="save_details">Save Details</string>
+    <string name="display_name">Display name</string>
+    <string name="logout">Logout</string>
+    <string name="category">Category</string>
+    <string name="i_m_interested">I\'m interested</string>
+    <string name="choma_na_ngoma" translatable="false">Choma na Ngoma</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+    <string name="location">Location</string>
+    <string name="featuring">Featuring</string>
+    <string name="more_info">More Info</string>
+
+    <string name="venue">Venue</string>
+    <string name="event_name">Event Name</string>
+    <string name="hot">Hot</string>
+
 
 </resources>

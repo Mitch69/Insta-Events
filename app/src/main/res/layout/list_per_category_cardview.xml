@@ -74,7 +74,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
                     android:textSize="15sp"
-                    android:text="Event Name" />
+                    android:text="@string/event_name" />
 
                 <TextView
                     android:id="@+id/idDateText"
@@ -82,7 +82,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:textSize="15sp"
-                    android:text="Date" />
+                    android:text="@string/date" />
 
 
                 <TextView
@@ -91,7 +91,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:textSize="15sp"
-                    android:text="Venue" />
+                    android:text="@string/venue" />
 
             </LinearLayout>
 
