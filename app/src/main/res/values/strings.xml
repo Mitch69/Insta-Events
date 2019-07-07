@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">Insta Events</string>
+    <string name="home">Home</string>
+    <string name="browse">Browse</string>
+    <string name="events">Events</string>
+    <string name="create">Create</string>
+    <string name="profile">Profile</string>
+
+    //Gabriel's Strings
+    <string name="activity2_name">Login Page</string>
+    <string name="title_placeholder">Title</string>
+    <string name="news_placeholder">Event</string>
+    <string name="sports_info_placeholder">Here is some new on the event.</string>
+    <string name="go_to_login">Login</string>
+    <string name="signup_register">SignUp/Register</string>
+    <string name="signup">SignUp</string>
+    <string name="already_a_member_login">Already a member? Login</string>
+    <string name="login">Login</string>
+    <string name="email_hint">Email</string>
+    <string name="password_editText">Password</string>
+    <string name="password">Password</string>
+    <string name="not_a_member_yet">Not a member yet?</string>
+    <string name="register">Register</string>
+    <string name="see_what_s_popular">See what is popular</string>
+    <string name="or">or</string>
+    <string name="let_s_find_your_first_event">Let\'s find your first event</string>
+    <string name="get_started">Get Started</string>
+    <string name="browse_events">Browse Events</string>
+
+    <string name="title_activity_login2">Sign in</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="action_search_text">Search</string>
+    <string name="account_settings_text">Account Settings</string>
+    <string name="action_logout_text">Logout</string>
+    <string name="reg_login_text">Already have an account?</string>
+    <string name="confirm_pass_text">Confirm Password</string>
+    <string name="create_an_account">Create an Account</string>
+    <string name="setup_hint_name">Your Name</string>
+    <string name="setup_btn_name_text">Save Account Settings</string>
+    <string name="setup_account_text">Account Settings</string>
+
+</resources>

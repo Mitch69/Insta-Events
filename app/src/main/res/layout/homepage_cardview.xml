@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/idCardView"
+        android:layout_width="250dp"
+        android:layout_height="142dp"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardElevation="8dp"
+        app:cardCornerRadius="10dp">
+
+        <!-- Horizontal LinearLayout for both the image and event, date and venue-->
+        <LinearLayout
+            android:id="@+id/idLinearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:elevation="0dp"
+            android:padding="0dp">
+
+            <!-- Event Image -->
+            <ImageView
+                android:id="@+id/idEventImage"
+                android:layout_width="130dp"
+                android:layout_height="160dp"
+                android:layout_centerVertical="true"
+                android:contentDescription="Event Image"
+                android:scaleType="fitStart"
+                android:src="@drawable/choma" />
+
+
+            <!-- Vertical LinearLayout for Event, Date and Venue -->
+            <LinearLayout
+                android:id="@+id/idRightTextLinearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="0dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/idEventText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:textSize="15sp"
+                    android:text="Event Name" />
+
+                <TextView
+                    android:id="@+id/idDateText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:textSize="15sp"
+                    android:text="Date" />
+
+
+                <TextView
+                    android:id="@+id/idVenueText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textSize="15sp"
+                    android:text="Venue" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

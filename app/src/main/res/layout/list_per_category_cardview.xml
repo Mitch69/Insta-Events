@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <!-- The Event number-->
+    <TextView
+        android:id="@+id/idNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:textSize="18sp"
+        android:textColor="#000"
+        android:layout_gravity="center_vertical"
+        android:text="1" />
+
+    <!-- The Purple line dividing the number and the event-->
+    <View
+        android:layout_gravity="center"
+        android:layout_width="4dp"
+        android:layout_height="144dp"
+        android:layout_weight="1"
+        android:background="@drawable/gradient"
+        android:layout_marginLeft="15dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:foreground="?android:attr/selectableItemBackground"
+        android:id="@+id/idListPerCategoryCardView"
+        android:layout_width="280dp"
+        android:layout_height="142dp"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardElevation="8dp"
+        app:cardCornerRadius="10dp"
+        android:clickable="true"
+        android:focusable="true">
+
+        <!-- Horizontal LinearLayout for both the image and event, date and venue-->
+        <LinearLayout
+            android:id="@+id/idLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:elevation="0dp"
+            android:padding="0dp">
+
+            <!-- Event Image -->
+
+            <ImageView
+                android:id="@+id/idEventImage"
+                android:layout_width="130dp"
+                android:layout_height="160dp"
+                android:layout_centerVertical="true"
+                android:contentDescription="Event Image"
+                android:scaleType="fitStart"
+                android:src="@drawable/choma" />
+
+
+            <!-- Vertical LinearLayout for Event, Date and Venue -->
+            <LinearLayout
+                android:id="@+id/idRightTextLinearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="0dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/idEventText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:textSize="15sp"
+                    android:text="Event Name" />
+
+                <TextView
+                    android:id="@+id/idDateText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:textSize="15sp"
+                    android:text="Date" />
+
+
+                <TextView
+                    android:id="@+id/idVenueText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textSize="15sp"
+                    android:text="Venue" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

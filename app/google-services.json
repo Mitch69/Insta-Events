@@ -1,0 +1,85 @@
+{
+  "project_info": {
+    "project_number": "1048225455275",
+    "firebase_url": "https://instaeventsv1-96b91.firebaseio.com",
+    "project_id": "instaeventsv1-96b91",
+    "storage_bucket": "instaeventsv1-96b91.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1048225455275:android:d593a8298d5dfec8",
+        "android_client_info": {
+          "package_name": "android.example.instaevents"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1048225455275-78sni81llqap716cp4b132kbf0fe91p5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "android.example.instaevents",
+            "certificate_hash": "01e67aa82fdcf4f292745adaa2f7d7a7342a3bfe"
+          }
+        },
+        {
+          "client_id": "1048225455275-dfp1bplrfpudfvsrgscb2ucahlkvvks1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwDnWFweURapnz2KXBphYlV2kUaJTexKA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1048225455275-dfp1bplrfpudfvsrgscb2ucahlkvvks1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1048225455275:android:070683f179c1ec69",
+        "android_client_info": {
+          "package_name": "android.example.instaeventsv1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1048225455275-3o6cf5vvfn7j1shskm0hqstjj0p00hos.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "android.example.instaeventsv1",
+            "certificate_hash": "01e67aa82fdcf4f292745adaa2f7d7a7342a3bfe"
+          }
+        },
+        {
+          "client_id": "1048225455275-dfp1bplrfpudfvsrgscb2ucahlkvvks1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwDnWFweURapnz2KXBphYlV2kUaJTexKA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1048225455275-dfp1bplrfpudfvsrgscb2ucahlkvvks1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
