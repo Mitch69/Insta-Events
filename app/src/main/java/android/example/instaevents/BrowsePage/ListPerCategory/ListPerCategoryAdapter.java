@@ -1,15 +1,21 @@
 package android.example.instaevents.BrowsePage.ListPerCategory;
 
+import android.app.ActivityOptions;
 import android.content.Context;
+import android.content.Intent;
+import android.example.instaevents.ClickedEvent.ClickedEventActivity;
 import android.example.instaevents.Homepage.Models.EventDetailsModel;
 import android.example.instaevents.R;
 import android.support.annotation.NonNull;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
 
 import java.util.List;
 
@@ -44,6 +50,20 @@ public class ListPerCategoryAdapter extends RecyclerView.Adapter<ListPerCategory
         holder.textViewEvent.setText(eventDetailsData.get(position).getEventName());
         holder.textViewDate.setText(eventDetailsData.get(position).getDate());
         holder.textViewVenue.setText(eventDetailsData.get(position).getVenue());
+        holder.cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(context, ClickedEventActivity.class);
+
+                //Start the activity
+                context.startActivity(intent);
+
+                //Activity Animation
+                Animatoo.animateZoom(context);
+            }
+        });
+
     }
 
 
@@ -57,6 +77,7 @@ public class ListPerCategoryAdapter extends RecyclerView.Adapter<ListPerCategory
 
         ImageView imageView;
         TextView textViewNumber, textViewEvent, textViewDate, textViewVenue;
+        CardView cardView;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -65,6 +86,7 @@ public class ListPerCategoryAdapter extends RecyclerView.Adapter<ListPerCategory
             textViewEvent = itemView.findViewById(R.id.idEventText);
             textViewDate = itemView.findViewById(R.id.idDateText);
             textViewVenue = itemView.findViewById(R.id.idVenueText);
+            cardView= (CardView)itemView.findViewById(R.id.idListPerCategoryCardView);
         }
     }
 

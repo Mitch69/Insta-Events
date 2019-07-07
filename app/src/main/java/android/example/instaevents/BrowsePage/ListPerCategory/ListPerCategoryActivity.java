@@ -21,6 +21,7 @@ public class ListPerCategoryActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.list_per_category_recyclerview);
 
+
         eventDetailsData = new ArrayList<>();
         eventDetailsData.add(new EventDetailsModel(R.drawable.choma, "Choma na Ngomaaa", "12th June 2019", "KICC"));
         eventDetailsData.add(new EventDetailsModel(R.drawable.choma, "Choma na Ngomaaa", "12th June 2019", "KICC"));

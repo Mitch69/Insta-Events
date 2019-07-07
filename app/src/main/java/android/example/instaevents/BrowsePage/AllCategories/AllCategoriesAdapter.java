@@ -1,5 +1,6 @@
 package android.example.instaevents.BrowsePage.AllCategories;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.example.instaevents.BrowsePage.ListPerCategory.ListPerCategoryActivity;
@@ -48,12 +49,13 @@ public class AllCategoriesAdapter extends RecyclerView.Adapter <AllCategoriesAda
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(context, ListPerCategoryActivity.class);
+                Intent intent = new Intent(v.getContext(), ListPerCategoryActivity.class);
 
                 //Start the activity
-                context.startActivity(intent);
+                v.getContext().startActivity(intent);
+
                 //Activity Animation
-                Animatoo.animateZoom(context);
+                Animatoo.animateZoom(v.getContext());
             }
         });
 

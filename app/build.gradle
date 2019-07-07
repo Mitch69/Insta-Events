@@ -44,8 +44,16 @@ dependencies {
     implementation 'de.hdodenhof:circleimageview:3.0.0'
     //activity transition animation
     implementation 'com.github.mohammadatif:Animatoo:master'
-    //retrofit library for making network calls
+    //blur library
+    implementation 'com.github.pinguo-zhouwei:EasyBlur:v1.0.0'
+
+    // GSON and retrofit for making network calls
+    implementation 'com.google.code.gson:gson:2.8.2'
     implementation 'com.squareup.retrofit2:retrofit:2.4.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    // Log for retrofit
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.9.1'
+    implementation 'com.squareup.okhttp3:okhttp:3.9.1'
+
 }
 

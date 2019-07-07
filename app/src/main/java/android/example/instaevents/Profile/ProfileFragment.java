@@ -56,7 +56,7 @@ public class ProfileFragment extends Fragment {
         blurredImage.setImageBitmap(new BlurUtils().blur(getContext(), bitmap, 25.0f));
 
 
-        profileImage.setImageResource(R.drawable.pic);
+        profileImage.setImageResource(R.drawable.user);
         displayName.setText("Sandra");
 
     }

@@ -1,6 +1,7 @@
 package android.example.instaevents;
 
 import android.example.instaevents.BrowsePage.AllCategories.BrowseFragment;
+import android.example.instaevents.Create.CreateFragment;
 import android.example.instaevents.EventsPage.TabFragment;
 import android.example.instaevents.Homepage.Fragments.HomeFragment;
 import android.example.instaevents.Profile.ProfileFragment;
@@ -19,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     final Fragment fragment1 = new HomeFragment();
     final Fragment fragment2 = new BrowseFragment();
     final Fragment fragment3 = new TabFragment();
-    final Fragment fragment4 = new HomeFragment();
+    final Fragment fragment4 = new CreateFragment();
     final Fragment fragment5 = new ProfileFragment();
     final FragmentManager fm = getSupportFragmentManager();
     Fragment active = fragment1;

@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:foreground="?android:attr/selectableItemBackground"
-    android:id="@+id/idCardview"
+    android:id="@+id/idTabCardview"
     android:layout_width="110dp"
     android:layout_height="160dp"
     android:layout_gravity="center"

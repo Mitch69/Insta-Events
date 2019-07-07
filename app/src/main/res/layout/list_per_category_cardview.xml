@@ -5,6 +5,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
 
+    <!-- The Event number-->
     <TextView
         android:id="@+id/idNumber"
         android:layout_width="wrap_content"
@@ -15,23 +16,27 @@
         android:layout_gravity="center_vertical"
         android:text="1" />
 
+    <!-- The Purple line dividing the number and the event-->
     <View
         android:layout_gravity="center"
         android:layout_width="4dp"
         android:layout_height="144dp"
         android:layout_weight="1"
-        android:background="#673AB7"
+        android:background="@drawable/gradient"
         android:layout_marginLeft="15dp"/>
 
     <android.support.v7.widget.CardView
-        android:id="@+id/idCardView"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:id="@+id/idListPerCategoryCardView"
         android:layout_width="280dp"
         android:layout_height="142dp"
         android:layout_margin="10dp"
         android:orientation="horizontal"
         app:cardBackgroundColor="@android:color/white"
         app:cardElevation="8dp"
-        app:cardCornerRadius="10dp">
+        app:cardCornerRadius="10dp"
+        android:clickable="true"
+        android:focusable="true">
 
         <!-- Horizontal LinearLayout for both the image and event, date and venue-->
         <LinearLayout
