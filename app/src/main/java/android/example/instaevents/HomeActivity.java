@@ -33,11 +33,6 @@ public class HomeActivity extends AppCompatActivity {
         viewPager = findViewById(R.id.viewPager);
         viewPager.setAdapter(adapter);
         viewPager.setPadding(130, 0, 130, 0);
-
-
-
-
-
     }
 
     public void btnSettings_onclick(View view) {

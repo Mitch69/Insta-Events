@@ -2,7 +2,6 @@ package android.example.instaevents;
 
 import android.content.Context;
 import android.content.Intent;
-import android.example.instaevents.R;
 import android.support.annotation.NonNull;
 import android.support.v4.view.PagerAdapter;
 import android.view.LayoutInflater;
@@ -15,17 +14,13 @@ import java.util.List;
 
 public class Adapter extends PagerAdapter {
 
-    private List<android.example.instaevents.Model> models;
+    private List<Model> models;
     private LayoutInflater layoutInflater;
     private Context context;
 
-    public Adapter(List<android.example.instaevents.Model> models, Context context) {
+    public Adapter(List<Model> models, Context context) {
         this.models = models;
         this.context = context;
-    }
-
-    public Adapter(List<Model> models, HomeActivity context) {
-
     }
 
     @Override
@@ -48,10 +43,12 @@ public class Adapter extends PagerAdapter {
         TextView title, desc;
 
         imageView = view.findViewById(R.id.image);
-
+        title = view.findViewById(R.id.title);
+        desc = view.findViewById(R.id.desc);
 
         imageView.setImageResource(models.get(position).getImage());
-
+        title.setText(models.get(position).getTitle());
+        desc.setText(models.get(position).getDesc());
 
         container.addView(view, 0);
 
