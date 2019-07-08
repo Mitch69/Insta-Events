@@ -1,8 +1,16 @@
 package android.example.instaevents.BrowsePage.AllCategories;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 public class AllCategoriesModel {
 
+    @SerializedName("category_poster")
+    @Expose
     private int Thumbnail;
+
+    @SerializedName("category")
+    @Expose
     private String Category;
 
     public AllCategoriesModel() {

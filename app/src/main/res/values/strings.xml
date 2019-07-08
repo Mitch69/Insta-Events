@@ -6,4 +6,21 @@
     <string name="create">Create</string>
     <string name="profile">Profile</string>
 
+    <string-array name="dropdown_category">
+        <item>Choose a Category</item>
+        <item>Agriculture</item>
+        <item>Animals &amp; Pets</item>
+        <item>Arts &amp;Crafts</item>
+        <item>Automotive</item>
+        <item>Career &amp; Business</item>
+        <item>Entertainment</item>
+        <item>Family</item>
+        <item>Fashion &amp; Beauty</item>
+        <item>Food &amp; Drinks</item>
+        <item>Health &amp; Wellness</item>
+        <item>IT &amp; Tech</item>
+        <item>Language &amp; Culture</item>
+        <item>Outdoors &amp; Adventure</item>
+    </string-array>
+
 </resources>

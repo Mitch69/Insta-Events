@@ -43,27 +43,29 @@
                 android:textStyle="bold" />
 
             <Button
-                android:id="@+id/idInterested"
+                android:id="@+id/idbtnInterested"
                 android:layout_width="148dp"
                 android:layout_height="48dp"
                 android:layout_marginLeft="47dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/button_shape"
                 android:clickable="true"
+                android:focusable="true"
                 android:text="I'm interested"
                 android:textAllCaps="false"
                 android:textColor="#fff"
                 android:textSize="15sp"/>
 
             <ImageButton
-                android:id="@+id/idShare"
+                android:id="@+id/idbtnShare"
                 android:layout_width="70dp"
                 android:layout_height="48dp"
                 android:layout_marginLeft="203dp"
                 android:layout_marginTop="-48dp"
                 android:background="@drawable/button_shape"
-                android:src="@drawable/share_icon" />
-<!--android:background="@android:color/transparent"-->
+                android:src="@drawable/share_icon"
+                android:clickable="true"
+                android:focusable="true"/>
 
             <ImageView
                 android:id="@+id/idStaticDate"

@@ -15,6 +15,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.blogspot.atifsoftwares.animatoolib.Animatoo;
+import com.bumptech.glide.Glide;
 
 import java.util.List;
 
@@ -43,7 +44,11 @@ public class AllCategoriesAdapter extends RecyclerView.Adapter <AllCategoriesAda
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
         holder.categoryText.setText(data.get(position).getCategory());
-        holder.categoryImage.setImageResource(data.get(position).getThumbnail());
+
+        AllCategoriesModel allCategoriesModel=data.get(position);
+        Glide.with(context)
+                .load(allCategoriesModel.getThumbnail())
+                .into(holder.categoryImage);
 
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override

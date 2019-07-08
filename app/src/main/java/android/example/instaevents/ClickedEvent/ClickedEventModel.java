@@ -1,13 +1,36 @@
 package android.example.instaevents.ClickedEvent;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 public class ClickedEventModel {
 
+    @SerializedName("event_poster")
+    @Expose
     private int Image;
+
+    @SerializedName("event_name")
+    @Expose
     private String EventName;
+
+    @SerializedName("event_date")
+    @Expose
     private String Date;
+
+    @SerializedName("event_time")
+    @Expose
     private String Time;
+
+    @SerializedName("event_location")
+    @Expose
     private String Location;
+
+    @SerializedName("event_artists")
+    @Expose
     private String Featuring;
+
+    @SerializedName("event_description")
+    @Expose
     private String moreInfo;
 
     public ClickedEventModel(int image, String eventName, String date, String time, String location, String featuring, String moreInfo) {

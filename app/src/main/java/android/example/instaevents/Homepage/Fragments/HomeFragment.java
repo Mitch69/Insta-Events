@@ -3,6 +3,7 @@ package android.example.instaevents.Homepage.Fragments;
 import android.example.instaevents.Homepage.Adapters.HomepageVerticalAdapter;
 import android.example.instaevents.Homepage.Models.HomepageCategoryModel;
 import android.example.instaevents.R;
+import android.example.instaevents.Retrofit.ApiInterface;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -19,7 +20,8 @@ public class HomeFragment extends Fragment {
 
     private RecyclerView recyclerView;
     private HomepageVerticalAdapter adapter;
-    ArrayList<HomepageCategoryModel> eventCategory;
+    ArrayList<HomepageCategoryModel> eventCategory = new ArrayList<>();
+    ApiInterface apiInterface;
 
     @Nullable
     @Override

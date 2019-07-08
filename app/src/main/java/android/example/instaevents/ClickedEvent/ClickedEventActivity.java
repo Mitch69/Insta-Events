@@ -1,27 +1,35 @@
 package android.example.instaevents.ClickedEvent;
 
-import android.animation.ArgbEvaluator;
 import android.example.instaevents.R;
+import android.example.instaevents.Retrofit.APIClient;
+import android.example.instaevents.Retrofit.ApiInterface;
+import android.example.instaevents.Retrofit.ListPojo;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.zhouwei.blurlibrary.EasyBlur;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 public class ClickedEventActivity extends AppCompatActivity {
 
     ViewPager viewPager;
     ClickedEventAdapter clickedEventAdapter;
-    List<ClickedEventModel> eventInfoData;
+    List<ClickedEventModel> eventInfoData = new ArrayList<>();
     Integer[]  pics;
-    ArgbEvaluator argbEvaluator = new ArgbEvaluator();
     ImageView blurredImage;
+    ApiInterface apiInterface;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,11 +40,6 @@ public class ClickedEventActivity extends AppCompatActivity {
         blurredImage = (ImageView) findViewById(R.id.activity_bg);
         final int[] RES = new int[]{R.drawable.car,R.drawable.choma,R.drawable.zainab,R.drawable.karen,};
 
-        eventInfoData = new ArrayList<>();
-        eventInfoData.add(new ClickedEventModel(R.drawable.car,"The Great RiftValley Circuit", "22nd June", "9:00am to 6:00pm", "RiftValley","Delta", "You better come to this race"));
-        eventInfoData.add(new ClickedEventModel(R.drawable.choma, "Choma na Ngoma 2019", "1st June 2019", "6:00pm - 6:00am", "KICC", "Sauti Sol, Nandy, Willy Paul, Hart The Band", "Choma Na Ngoma Festival will be a one of a kind music concert that seeks to celebrate African contemporary music , dance, drink and food. The concert seeks to further showcase some of the key artists who reflect the kind of music appreciated by the Kenyan audiences and played on the station." ));
-        eventInfoData.add(new ClickedEventModel(R.drawable.zainab, "Zainab Sule Live", "22nd June 2019", "7:00pm - 11:00pm", "Crooked Q's Rooftop, Westlands", "Null", "Join Nigeria's Queen of Soft Rock, Zainab Sule and some fine Kenyan rock acts in an unstoppable night of beautiful rock music." ));
-        eventInfoData.add(new ClickedEventModel(R.drawable.karen, "KCB Karen Masters", "30th June 2019", "8:00am - 6:00pm", "Karen Country Club", "Null", "A distinctly African tournament designed to promote the game of golf in Africa and to support local players in their quest to become world beating golfers.A large South African contingent alongside players from Kenya, Zambia and Zimbabwe and some from off the continent; Brazil, Ireland, England, USA will be represented." ));
 
         clickedEventAdapter = new ClickedEventAdapter(eventInfoData, this);
 
@@ -54,13 +57,13 @@ public class ClickedEventActivity extends AppCompatActivity {
 
             @Override
             public void onPageSelected(int position) {
-                Bitmap source = BitmapFactory.decodeResource(getResources(),RES[position]);
-                Bitmap bitmap = EasyBlur.with(getApplicationContext())
-                        .bitmap(source)
-                        .radius(20)
-                        .blur();
-
-                blurredImage.setImageBitmap(bitmap);
+//                Bitmap source = BitmapFactory.decodeResource(getResources(),RES[position]);
+//                Bitmap bitmap = EasyBlur.with(getApplicationContext())
+//                        .bitmap(source)
+//                        .radius(20)
+//                        .blur();
+//
+//                blurredImage.setImageBitmap(bitmap);
 
             }
 
@@ -71,8 +74,43 @@ public class ClickedEventActivity extends AppCompatActivity {
         });
 
 
+        // Retrofit starts here
+        apiInterface = APIClient.getClient().create(ApiInterface.class);
+        Call<ListPojo> call = apiInterface.getClickedEventModel();
 
-    } //SavedInstance
+        call.enqueue(new Callback<ListPojo>() {
+            @Override
+            public void onResponse(Call<ListPojo> call, Response<ListPojo> response) {
+                if(!response.isSuccessful()){
+                    Toast toast=Toast.makeText(getApplicationContext(),"Code: " + response.code() ,Toast.LENGTH_SHORT);
+                    toast.show();
+                    Log.i("error",response.toString());
+
+
+                }else {
+
+                    eventInfoData = response.body().getData();
+                    clickedEventAdapter.setData(eventInfoData);
+                    clickedEventAdapter.notifyDataSetChanged();
+
+                    Log.i("ERROR: Size is " + eventInfoData.size(), response.toString());
+                }
+
+            }//onResponse
+
+            @Override
+            public void onFailure(Call<ListPojo> call, Throwable t) {
+                Toast toast=Toast.makeText(getApplicationContext(),"Message: " + t.getMessage() ,Toast.LENGTH_SHORT);
+//                Toast toast=Toast.makeText(getApplicationContext(),"No internet connection available"  ,Toast.LENGTH_SHORT);
+                toast.show();
+                t.printStackTrace();
+            }
+        });
+
+
+
+
+    } //onCreate
 
 
 }//AppCompativity

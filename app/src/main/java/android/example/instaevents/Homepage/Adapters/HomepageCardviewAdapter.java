@@ -1,6 +1,7 @@
 package android.example.instaevents.Homepage.Adapters;
 
 
+import android.content.Context;
 import android.example.instaevents.Homepage.Models.EventDetailsModel;
 import android.example.instaevents.R;
 import android.support.annotation.NonNull;
@@ -11,13 +12,25 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+
 import java.util.ArrayList;
+import java.util.List;
 
 public class HomepageCardviewAdapter extends RecyclerView.Adapter<HomepageCardviewAdapter.MyViewHolder> {
 
     private ArrayList<EventDetailsModel> data;
+    private Context context;
 
     public HomepageCardviewAdapter(ArrayList<EventDetailsModel> data) {
+        this.data = data;
+    }
+
+    public HomepageCardviewAdapter(Context context) {
+        this.context = context;
+    }
+
+    public void setEventdetailsdata(List<EventDetailsModel> detailsModels) {
         this.data = data;
     }
 
@@ -31,7 +44,12 @@ public class HomepageCardviewAdapter extends RecyclerView.Adapter<HomepageCardvi
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        holder.imageView.setImageResource(data.get(position).getThumbnail());
+
+        EventDetailsModel eventDetailsModel=data.get(position);
+        Glide.with(context)
+                .load(eventDetailsModel.getThumbnail())
+                .into(holder.imageView);
+
         holder.textViewEvent.setText(data.get(position).getEventName());
         holder.textViewDate.setText(data.get(position).getDate());
         holder.textViewVenue.setText(data.get(position).getVenue());

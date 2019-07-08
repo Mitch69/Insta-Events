@@ -1,8 +1,25 @@
 package android.example.instaevents.Homepage.Models;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 public class EventDetailsModel {
+
+    @SerializedName("event_poster")
+    @Expose
     private int Thumbnail;
-    private String eventName, date, venue;
+
+    @SerializedName("event_name")
+    @Expose
+    private String eventName;
+
+    @SerializedName("event_date")
+    @Expose
+    private String date;
+
+    @SerializedName("event_location")
+    @Expose
+    private String venue;
 
     public EventDetailsModel(int thumbnail, String eventName, String date, String venue) {
         Thumbnail = thumbnail;
